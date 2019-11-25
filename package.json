@@ -1,0 +1,31 @@
+{
+  "name": "homebridge-blinds-cmd2",
+  "version": "1.0.0",
+  "description": "A homebridge plugin to control my blinds via CMD commands",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint *.js"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "homekit"
+  ],
+  "engines": {
+    "node": ">4.0.0",
+    "homebridge": ">=0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jelkose/homebridge-blinds-cmd2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jelkose/homebridge-blinds-cmd2/issues"
+  },
+  "author": "Jelko Seiboth <info@jelko-se.de>",
+  "license": "ISC",
+  "dependencies": {
+    "node-persist": "^2.1.0",
+    "request": "^2.88.0"
+  }
+}
