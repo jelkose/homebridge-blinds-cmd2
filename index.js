@@ -107,7 +107,7 @@ BlindsCMD2Accessory.prototype.setTargetPosition = function(pos, callback) {
     let self = this;
 
     const startTimestamp = Date.now();
-    this.cmdRequest((moveUp ? this.upCMD : this.downCMD), function(err) {
+    this.cmdRequest((moveUp ? this.upCMD : this.downCMD), function(err, stdout, stderr) {
         if (err) {
             callback(null);
             return;
@@ -162,14 +162,14 @@ BlindsCMD2Accessory.prototype.setTargetPosition = function(pos, callback) {
 };
 
 BlindsCMD2Accessory.prototype.cmdRequest = function(cmd, callback) {
-	if (!cmd) callback(null);
-
-	exec(cmd, function(error, stdout, stderr) {
-	callback(error, stdout, stderr)
-	});
-
-    
-
+	if (!cmd)
+	{
+		callback(null);
+	} else {
+		exec(cmd, function(error, stdout, stderr) {
+			callback(error, stdout, stderr)
+		});
+	}
 };
 
 BlindsCMD2Accessory.prototype.getServices = function() {
